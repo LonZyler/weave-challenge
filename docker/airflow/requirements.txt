@@ -1,0 +1,2 @@
+apache-airflow-providers-apache-spark==2.1.1
+apache-airflow-providers-docker==3.5.1
