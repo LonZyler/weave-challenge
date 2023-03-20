@@ -2,8 +2,6 @@ import os
 from datetime import datetime, timedelta
 
 from airflow import DAG
-# from airflow.providers.apache.spark.operators.spark_submit import \
-#     SparkSubmitOperator
 from airflow.operators.bash import BashOperator
 from airflow.operators.docker_operator import DockerOperator
 from docker.types import Mount
@@ -58,7 +56,6 @@ with DAG(
             '-c',
             f"cd {os.environ.get('WORKER_PROJ_DIR')} && spark-submit --packages com.databricks:spark-xml_2.12:0.16.0 apps/xml-ingest.py"
         ],
-        # command=['bash', '-c', 'ls /opt/bitnami/spark/test/apps'],
         docker_url="unix://var/run/docker.sock",
         network_mode="bridge"
     )
