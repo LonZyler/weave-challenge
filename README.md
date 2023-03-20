@@ -5,11 +5,15 @@ The challenge for this project is to create a data pipeline that will ingest a U
 The XML file Q9Y261.xml located in the data directory contains information about a protein. The task is to create a data pipeline that will ingest the XML file and store as much information as possible in a Neo4j graph database.
 
 ### Project's output sample
+![image](https://user-images.githubusercontent.com/20272456/226253892-8c3ecebb-f22b-4c17-abef-b14a1885ea1b.png)
 
+## Prerequisites
+
+You will need to have **Docker** and **Docker Compose** installed on your system to use this project.
 
 ## Getting Started
 
-To use this project, you will need to have Docker and Docker Compose installed on your system. Once you have installed Docker and Docker Compose, follow the instructions below to get started with the project.
+Once you have installed Docker and Docker Compose, follow the instructions below to get started with the project.
 
 1.  Clone the repository to your local machine.
     
@@ -58,10 +62,6 @@ To use this project, you will need to have Docker and Docker Compose installed o
 │   └── spark-docker-compose.yml
 └── start.sh
 ``` 
-
-## Prerequisites
-
-You will need to have Docker and Docker Compose installed on your system to use this project.
 
 ## Built With
 
