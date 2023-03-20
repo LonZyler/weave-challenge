@@ -5,6 +5,7 @@ The challenge for this project is to create a data pipeline that will ingest a U
 The XML file Q9Y261.xml located in the data directory contains information about a protein. The task is to create a data pipeline that will ingest the XML file and store as much information as possible in a Neo4j graph database.
 
 ### Project's output sample
+![image](https://user-images.githubusercontent.com/20272456/226253892-8c3ecebb-f22b-4c17-abef-b14a1885ea1b.png)
 
 
 ## Getting Started
