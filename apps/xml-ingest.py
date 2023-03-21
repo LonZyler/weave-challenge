@@ -75,7 +75,6 @@ def extract_data(spark):
         DataFrames containing the extracted data.
     """
     protein_datasets = glob.glob('data/*.xml')
-    xml_file_path = 'data/Q9Y261.xml'
     extracted_datasets = {}
     for dataset_path in protein_datasets:
         protein_name = dataset_path.split('/')[-1].replace('.xml', '')
@@ -84,7 +83,7 @@ def extract_data(spark):
             .read
             .format("xml")
             .option("rowTag", "entry")
-            .load(xml_file_path)
+            .load(dataset_path)
         )
 
     return extracted_datasets
@@ -251,7 +250,7 @@ def init_spark():
         A tuple containing the SparkSession and SparkContext objects.
     """
     spark = SparkSession.builder\
-        .appName("sarasa_10")\
+        .appName("xml-ingest")\
         .getOrCreate()
     sc = spark.sparkContext
     sc.setLogLevel("WARN")
